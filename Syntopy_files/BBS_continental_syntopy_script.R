@@ -1,9 +1,8 @@
-#Script for calculating continental syntopy using BBS 50-stop data
-	
-rm(list=ls())   # Remove all variables from active memory
+#Script for calculating continental syntopy (see Methods for details) using BBS 50-stop data
+#BBS data can be downloaded from https://www.pwrc.usgs.gov/BBS/RawData/ 
 
 #Merge the BBS 50-Stop data files into a single data.frame	
-setwd("~/BBS/BBS data 2018/50-StopData")
+setwd("50-StopData")
 x <- list.files()
 data.50 <- read.csv(x[1], header=TRUE, colClasses="numeric", na.strings="*")
 for(i in 2:length(x)) {
@@ -14,7 +13,7 @@ for(i in 2:length(x)) {
 #Open the species pair list and create list of unique AOU numbers
     #absence of a species in the BBS list was assumed to mean that the species has not been recorded in BBS surveys; species pairs including those species are tagged with In.BBS = 0
 
-wc.pairs <- read.csv("~/BBS/Species_pairs.csv", header=TRUE)
+wc.pairs <- read.csv("Species_pairs.csv", header=TRUE)
 wc.pairs <- subset(wc.pairs, wc.pairs$In.BBS==1)
 	#(removes species wc.pairs that are not in BBS Species.List (i.e., one or both species missing))
 species <- append(wc.pairs$AOU.1, wc.pairs$AOU.2)
@@ -154,9 +153,9 @@ for(k in 1:length(routes.j[,1])) {
 }
 
     if(j==1) {
-        write.table(routes.j, file="~/BBS/Continental.syntopy.counts.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+        write.table(routes.j, file="Continental.syntopy.counts.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
         } else {
-        write.table(routes.j, file="~/BBS/Continental.syntopy.counts.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
+        write.table(routes.j, file="Continental.syntopy.counts.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
         }
         print(paste("Saved after ", j, " wc.pairs on ", date(), sep=""))
    
@@ -167,7 +166,7 @@ for(k in 1:length(routes.j[,1])) {
 #Calculate indices of syntopy for each species pair across all routes where both species were observed
 
 rm(list=ls())   # Remove all variables from active memory
-counts <- read.csv("~/BBS/Continental.syntopy.counts.csv", header=TRUE)
+counts <- read.csv("Continental.syntopy.counts.csv", header=TRUE)
   
   # Generate a list of unique species pairs and include english, latin and AOU names
   u.pairs <- unique(counts[,c(4:9)])
@@ -242,5 +241,5 @@ counts <- read.csv("~/BBS/Continental.syntopy.counts.csv", header=TRUE)
   }
   }
   }
-write.table(u.pairs, file="~/BBS/Continental_syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(u.pairs, file="Continental_syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 

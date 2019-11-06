@@ -1,3 +1,5 @@
+#This script calculates a regional value of syntopy (see Methods) using BBS data, which can be downloaded from https://www.pwrc.usgs.gov/BBS/RawData/ 
+
 # Step 1: Get list of routes within 250km of study location that were run in the time period specified
 # Step 2: Narrow these routes to the runs that have 50-stop data
 # Step 3: Identify routes where both IT species were observed and create a list of species pairs involving one or both IT species
@@ -8,14 +10,10 @@
 # --------------------------------------------------
 # Step 1: Get list of routes within 250km of study location that were run in the time period specified
 
-install.packages("fossil")
-
-rm(list=ls())
 library(fossil)
-weather <- read.csv("~/BBS/BBS data 2018/weather.csv", header=TRUE)
-routes <- read.csv("~/BBS/BBS data 2018/routes.csv", header=TRUE)
-locations <- read.csv("~/BBS/locations.csv", header=TRUE)
-#(locations.csv file is a list of the locations where interspecific territoriality was reported; it also lists the IT species pairs)
+weather <- read.csv("weather.csv", header=TRUE)
+routes <- read.csv("routes.csv", header=TRUE)
+locations <- read.csv("locations.csv", header=TRUE) #(locations.csv file is a list of the locations where interspecific territoriality was reported; it also lists the IT species pairs)
 
 #Make a list of all routes that were run from 1982 to 2017, including their lat long coordinates
 
@@ -96,14 +94,14 @@ for(j in 1:length(locations$FocalSp)) {
     print(paste(j, " locations completed.", sep=""))
     
     if(j==1) {
-        write.table(routes.250, file="~/BBS/Routes250.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+        write.table(routes.250, file="Routes250.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
     } else {
-        write.table(routes.250, file="~/BBS/Routes250.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
+        write.table(routes.250, file="Routes250.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
     }
 }
 }
 #save the locations file with the new routes.250 column
-write.table(locations, file="~/BBS/locations.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(locations, file="locations.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 
 
@@ -111,9 +109,9 @@ write.table(locations, file="~/BBS/locations.csv", append=FALSE, quote=FALSE, se
 # Step 2: Make a subset of the BBS 50-stop data that includes runs for the routes in Routes250.csv  
 	
 # Read in the routes.250 dataset generated in step 1:
-routes.250 <- read.csv("~/BBS/Routes250.csv", header=TRUE)
+routes.250 <- read.csv("Routes250.csv", header=TRUE)
 
-setwd("~/BBS/BBS data 2018/50-StopData")
+setwd("50-StopData")
 x <- list.files()
 
 # Read in the 50-stop BBS dataset (comes in several separate .csv files)
@@ -167,15 +165,15 @@ data.50$matching.factor <- paste(data.50[,3],data.50[,4],data.50[,5],data.50[,6]
 # require data at a later stage (only those within 250km of a study location)
 data.50.final <- subset(data.50, data.50$matching.factor %in% unique.matching.factor)
 
-write.table(data.50.final, file="~/BBS/Data_50-stop.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
-write.table(runs.250, file="~/BBS/Runs_250.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(data.50.final, file="Data_50-stop.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(runs.250, file="Runs_250.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 # --------------------------------------------------
 # Step 3: Identify routes where both IT species were observed and create a list of species pairs involving one or both IT species
 
-species.list <- read.csv("~/BBS/SpeciesList.csv", header=TRUE)
-data.50.final <- read.csv("~/BBS/Data_50-stop.csv", header=TRUE)
-routes.250 <- read.csv("~/BBS/Routes250.csv", header=TRUE)
+species.list <- read.csv("SpeciesList.csv", header=TRUE)
+data.50.final <- read.csv("Data_50-stop.csv", header=TRUE)
+routes.250 <- read.csv("Routes250.csv", header=TRUE)
 
 # Generate a list of unique routes within 250km of study locations
 unique.routes.250 <- unique(routes.250[,c(1:2,9:13)])
@@ -285,9 +283,9 @@ for(i in 1:length(unique.routes.250[,1])) {
 sp.pair.list2 <- data.frame(sp.pair, study.ID, location.ID, state, route, IT.sp.1, IT.sp.2, IT.species, other.species)
 # ____________________________________________________________
 
-write.table(sp.pair.list, file="~/BBS/50-stop-pairs.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
-write.table(sp.pair.list2, file="~/BBS/50-stop-pairs-focal.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
-write.table(unique.routes.250, file="~/BBS/50-stop-routes.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(sp.pair.list, file="50-stop-pairs.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(sp.pair.list2, file="50-stop-pairs-focal.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(unique.routes.250, file="50-stop-routes.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 # --------------------------------------------------
 
@@ -295,7 +293,7 @@ write.table(unique.routes.250, file="~/BBS/50-stop-routes.csv", append=FALSE, qu
 # Step 4: For each species pair in each route, get counts of total, focal, other, shared stops
 
 rm(list=ls())
-setwd("~/BBS/")
+setwd("")
 unique.routes.250 <- read.csv("50-stop-routes.csv", header=TRUE)
 runs.250 <- read.csv("Runs_250.csv", header=TRUE)
 pairs <- read.csv("50-stop-pairs.csv", header=TRUE)
@@ -373,11 +371,11 @@ for(i in 1:length(pairs[,1])) {
         print(paste("Finished ", i, " pairs on ", date(), sep=""))
     }
     if(i %% 1000 == 0) {
-        write.table(pairs, file="~/BBS/50-stop-pairs2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+        write.table(pairs, file="50-stop-pairs2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
         print(paste("Saved after ", i, " pairs on ", date(), sep=""))
     }  
 }
-write.table(pairs, file="~/BBS/50-stop-pairs2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(pairs, file="50-stop-pairs2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 
 # ____________________________________________________________
@@ -430,17 +428,17 @@ for(i in 1:length(pairs.focal[,1])) {
         print(paste("Finished ", i, " pairs on ", date(), sep=""))
     }
     if(i %% 200 == 0) {
-        write.table(pairs.focal, file="~/BBS/50-stop-pairs-focal2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+        write.table(pairs.focal, file="50-stop-pairs-focal2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
         print(paste("Saved after ", i, " pairs on ", date(), sep=""))
     }  
 }
-write.table(pairs.focal, file="~/BBS/50-stop-pairs-focal2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(pairs.focal, file="50-stop-pairs-focal2.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 # --------------------------------------------------
 # Step 5: Calculate indices of syntopy for each species pair at each location
 
-pairs <- read.csv("~/BBS/50-stop-pairs2.csv", header=TRUE)
-pairs.focal <- read.csv("~/BBS/50-stop-pairs-focal2.csv", header=TRUE)
+pairs <- read.csv("50-stop-pairs2.csv", header=TRUE)
+pairs.focal <- read.csv("50-stop-pairs-focal2.csv", header=TRUE)
 
 pairs <- rbind(pairs, pairs.focal)
 
@@ -507,7 +505,7 @@ for(i in 1:length(u.pair.loc[,1])) {
         print(paste("Finished ", i, " pairs on ", date(), sep=""))            # Progress report
     }
 }
-write.table(u.pair.loc, file="~/BBS/Syntopy-pair-location.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(u.pair.loc, file="Syntopy-pair-location.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 
 
 #Step 6: Average the syntopy estimates available for each species pair of interest
@@ -516,8 +514,8 @@ write.table(u.pair.loc, file="~/BBS/Syntopy-pair-location.csv", append=FALSE, qu
 
 rm(list=ls())
 
-data <- read.csv("~/BBS/Syntopy-pair-location.csv", header=TRUE)
-pairs <-read.csv("~/BBS/Species_pairs.csv", header=TRUE)
+data <- read.csv("Syntopy-pair-location.csv", header=TRUE)
+pairs <-read.csv("Species_pairs.csv", header=TRUE)
 
 #add unique species pair and location by species pair columns to syntopy data
 for(i in 1:length(data[,1])){
@@ -580,5 +578,5 @@ for (i in 1:length(final[,1])) {
 	final$syntopy1u[i]<-mean(sub$syntopy1u)
     final$syntopy2u[i]<-mean(sub$syntopy2u)}		
 
-write.table(final, file="~/BBS/Syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+write.table(final, file="Syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
 

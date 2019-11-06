@@ -1,21 +1,4 @@
-
-#purpose of this script is to generate eBird-based syntopy and sympatry estimates
-
-#assumes that most eBird records during the peak breeding months are valid, even if they are outside the breeding range recognized by birdlife intl.
-#(requires there to be at least 10 observations of the species in sympatry in a given year, which should screen out some bad records)
-
-
-#install required packages (only needs to be done once with a given R build)
-install.packages("sp")
-install.packages("rgeos")
-install.packages("maptools")
-install.packages("ggmap")
-install.packages("geosphere")
-install.packages("rgdal")
-install.packages("raster")
-
-#remove all variables from active memory
-rm(list=ls())                                                                   
+#This script generates syntopy and sympatry estimates using data from eBird dataset, which can be requested from ebird.org
 
 #load packages
 library(sp)
@@ -28,7 +11,7 @@ library(geosphere)
 library(tools)
 
 #open species pair list
-taxa <- read.csv("~/BBS/Species_pairs", header=TRUE)
+taxa <- read.csv("Species_pairs.csv", header=TRUE)
 
 #Create output variables if starting over with new species pair list
 if(length(taxa$ebird.min.syntopy)==0) {
@@ -55,11 +38,11 @@ if(length(taxa$ebird.min.syntopy)==0) {
 for(i in 1:length(taxa$pair.n)){
 
     #Find eBird files	
-    ebirdpath1U<-list.files(path="~/eBird/US_Canada", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
-    ebirdpath2U<-list.files(path="~/eBird/US_Canada", pattern=as.character(taxa$sp.2.sci[i]), full.names='TRUE')
-    ebirdpath1M<-list.files(path="~/eBird/Mexico", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
-    ebirdpath2M<-list.files(path="~/eBird/Mexico", pattern=as.character(taxa$sp.2.sci[i]), full.names='TRUE')
-    dummyfile<-"~/eBird/file_used_by_syntopy_script.txt"
+    ebirdpath1U<-list.files(path="US_Canada", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
+    ebirdpath2U<-list.files(path="US_Canada", pattern=as.character(taxa$sp.2.sci[i]), full.names='TRUE')
+    ebirdpath1M<-list.files(path="Mexico", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
+    ebirdpath2M<-list.files(path="Mexico", pattern=as.character(taxa$sp.2.sci[i]), full.names='TRUE')
+    dummyfile<-"eBird_file_used_by_syntopy_script.txt"
     
     #Read dummy files in case some ebird files are missing or empty (allows for merging later)
     ebird1U <-read.delim(dummyfile, header=FALSE, sep="\t")
@@ -230,7 +213,7 @@ for(i in 1:length(taxa$pair.n)){
       }
     
     #calculate syntopy metrics
-    if(n1+n2>10){  #require there to be more than 10 records in sympatry, otherwise leave syntopy NA
+    if(n1+n2>10){ #(requires there to be at least 10 observations of the species in sympatry in a given year, which should screen out some bad records)
     	if(n1<n2){
         min.syntopy[k]<-sp1.shared/n1 
       } else {
@@ -272,9 +255,9 @@ print(k)
   year.data <- data.frame(sp1.name, sp2.name, years, sp1.total.count, sp2.total.count, sp1.sympatry.count, sp2.sympatry.count, sp1.syntopy.count, sp2.syntopy.count, min.syntopy, sp1.syntopy, sp2.syntopy, mean.syntopy, overall.syntopy, min.sympatry, sp1.sympatry, sp2.sympatry, mean.sympatry, overall.sympatry)
   
   if(i == 1){
-  write.table(year.data, file="~/eBird/eBird_syntopy_counts.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)	
+  write.table(year.data, file="eBird_syntopy_counts.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)	
   } else {  
-  write.table(year.data, file="~/eBird/eBird_syntopy_counts.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
+  write.table(year.data, file="eBird_syntopy_counts.csv", append=TRUE, quote=FALSE, sep=",", row.names=FALSE, col.names=FALSE)
   }
     
   taxa$ebird.min.syntopy[i]<-mean(min.syntopy, na.rm=TRUE)
@@ -297,5 +280,5 @@ print(k)
 #} #closes if for skipping species not recognized by BirdLife 
   
 #save the data after finishing each species pair
-write.table(taxa, file="~/eBird/eBird_syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)	
+write.table(taxa, file="eBird_syntopy.csv", append=FALSE, quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)	
 } #closes species pair loop
