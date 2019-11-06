@@ -1,0 +1,194 @@
+SpPair,StudyID,LocationID,Common1,Scientific1,FocalSp,Common2,Scientific2,ITSp,FirstYear,LastYear,Latitude,Longitude,Notes,spsp
+1,77,22,Red-winged blackbird,Agelaius phoeniceus,4980,Tri-colored blackbird,Agelaius tricolor,5000,1957,1961,34.141479,118.878101,,49805000
+1,77,52,Red-winged blackbird,Agelaius phoeniceus,4980,Tri-colored blackbird,Agelaius tricolor,5000,1957,1961,39.0438146,121.6164684,,49805000
+1,78,58,Red-winged blackbird,Agelaius phoeniceus,4980,Tri-colored blackbird,Agelaius tricolor,5000,1960,1965,39.310279,122.488425,,49805000
+1,77,59,Red-winged blackbird,Agelaius phoeniceus,4980,Tri-colored blackbird,Agelaius tricolor,5000,1957,1961,39.3386126,122.5109096,,49805000
+2,8,89,Red-winged blackbird,Agelaius phoeniceus,4980,Marsh wren,Cistothorus palustris,7250,1967,1968,43.413701,93.418053,,49807250
+2,105,124,Red-winged blackbird,Agelaius phoeniceus,4980,Marsh wren,Cistothorus palustris,7250,1969,1969,47.417798,117.569262,,49807250
+2,75,127,Red-winged blackbird,Agelaius phoeniceus,4980,Marsh wren,Cistothorus palustris,7250,1961,1962,47.645804,122.290736,,49807250
+2,82,132,Red-winged blackbird,Agelaius phoeniceus,4980,Marsh wren,Cistothorus palustris,7250,1976,1978,49.098211,123.178692,,49807250
+2,118,153,Red-winged blackbird,Agelaius phoeniceus,4980,Marsh wren,Cistothorus palustris,7250,1980,1982,33.666881,117.843692,,49807250
+3,43,73,Red-winged blackbird,Agelaius phoeniceus,4980,Common Grackle,Quiscalus quiscula,5110,1978,1978,41.718604,87.869924,,49805110
+3,110,78,Red-winged blackbird,Agelaius phoeniceus,4980,Common Grackle,Quiscalus quiscula,5110,1965,1965,42.363525,71.374879,,49805110
+3,107,87,Red-winged blackbird,Agelaius phoeniceus,4980,Common Grackle,Quiscalus quiscula,5110,1962,1963,43.044882,89.425501,,49805110
+4,45,51,Red-winged blackbird,Agelaius phoeniceus,4980,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,1930,1937,38.96389444,117.0680556,,49704980
+4,55,106,Red-winged blackbird,Agelaius phoeniceus,4980,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,1973,1980,44.088151,87.961719,,49704980
+4,3,120,Red-winged blackbird,Agelaius phoeniceus,4980,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,1977,1988,46.896919,119.272658,,49704980
+4,76,123,Red-winged blackbird,Agelaius phoeniceus,4980,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,1961,1963,47.417494,117.573895,,49704980
+5,78,58,Tricolored blackbird,Agelaius tricolor,5000,Yellow-headed blackbird,Xanthocephalus xanthocephalus,4970,1960,1965,39.310279,122.488425,,49705000
+6,113,64,Seaside Sparrow,Ammodramus maritimus,5500,Saltmarsh Sparrow,Ammodramus caudacutus,5490,1955,1955,39.978124,74.076521,,54905500
+6,84,66,Seaside Sparrow,Ammodramus maritimus,5500,Saltmarsh Sparrow,Ammodramus caudacutus,5490,1968,1971,40.62898,73.353679,,54905500
+7,53,10,Five-striped Sparrow,Amphispiza quinquestriata,5742,Rufous-crowned Sparrow,Aimophila ruficeps,5800,1974,1978,31.498699,110.832365,,57425800
+8,30,53,Woodhouses Scrub-Jay,Aphelocoma woodhouseii,4813,California Scrub-Jay,Aphelocoma californica,4812,2012,2013,39.0557,119.5703,,48124813
+8,30,53,Woodhouses Scrub-Jay,Aphelocoma woodhouseii,4813,California Scrub-Jay,Aphelocoma californica,4810,2012,2013,39.0557,119.5703,duplicated because there are two AOU codes for both sp. ,48104813
+8,30,53,Woodhouses Scrub-Jay,Aphelocoma woodhouseii,4810,California Scrub-Jay,Aphelocoma californica,4812,2012,2013,39.0557,119.5703,duplicated because there are two AOU codes for both sp. ,48104812
+9,14,20,Black-crested Titmouse,Baeolophus atricristatus,7320,Tufted Titmouse,Baeolophus bicolor,7310,2011,2013,33.24221111,97.76791389,,73107320
+9,14,30,Black-crested Titmouse,Baeolophus atricristatus,7320,Tufted Titmouse,Baeolophus bicolor,7310,2011,2013,34.73903611,99.27907778,,73107320
+10,15,42,Oak Titmouse,Baeolophus inornatus,7330,Chestnut-backed Chickadee,Poecile rufescens,7410,1951,1952,37.87277778,122.2433333,,73307410
+10,15,42,Oak Titmouse,Baeolophus inornatus,7330,Chestnut-backed Chickadee,Poecile rufescens,7332,1951,1952,37.87277778,122.2433333,duplicated because there are two AOU codes for sp. 1,73307332
+11,31,16,Bridled Titmouse,Baeolophus wollweberi,7340,Bushtit,Psaltriparus minimus,7430,1984,1986,31.881122,109.231879,,73407430
+12,31,16,Bridled Titmouse,Baeolophus wollweberi,7340,Black-throated Gray Warbler,Setophaga nigrescens,6650,1984,1986,31.881122,109.231879,,66507340
+14,110,77,Marsh wren,Cistothorus palustris,7250,Swamp sparrow,Melospiza georgiana,5840,1965,1965,42.361917,71.371051,,58407250
+15,47,13,Greater Pewee,Contopus pertinax,4600,Western Wood-Pewee,Contopus sordidulus,4620,1951,1953,31.751142,109.429716,,46004620
+16,48,88,Bobolink,Dolichonyx oryzivorus,4940,Red-winged Blackbird,Agelaius phoeniceus,4980,1967,1967,43.225551,89.802181,,49404980
+17,108,85,Bobolink,Dolichonyx oryzivorus,4940,Savannah Sparrow,Passerculus Sandwichensis,5420,1964,1966,42.969282,89.379869,,49405420
+17,48,88,Bobolink,Dolichonyx oryzivorus,4940,Savannah Sparrow,Passerculus Sandwichensis,5420,1967,1967,43.225551,89.802181,,49405420
+18,95,68,Pacific-slope flycatcher,Empidonax difficilis,4641,Hammonds Flycatcher,Empidonax hammondii,4680,1984,1988,40.915688,123.56175,,46414680
+18,36,83,Pacific-slope flycatcher,Empidonax difficilis,4641,Hammonds Flycatcher,Empidonax hammondii,4680,1964,1970,42.726769,122.325951,,46414680
+19,27,136,Least flycatcher,Empidonax minimus,4670,Yellow Warbler,Setophaga petechia,6520,1974,1985,50.188981,98.444848,,46706520
+19,9,143,Least flycatcher,Empidonax minimus,4670,Yellow Warbler,Setophaga petechia,6520,1995,1997,51.861311,112.617009,,46706520
+20,98,98,Least flycatcher,Empidonax minimus,4670,American redstart,Setophaga ruticilla,6870,1974,1974,43.94161,71.709522,,46706870
+21,88,55,Dusky Flycatcher,Empidonax oberholseri,4690,Western Wood-Pewee,Contopus sordidulus,4620,2003,2006,39.126674,119.903348,,46204690
+21,88,55,Dusky Flycatcher,Empidonax oberholseri,4689,Western Wood-Pewee,Contopus sordidulus,4620,2003,2006,39.126674,119.903348,duplicated because there are two AOU codes for sp. 1,46204689
+22,36,107,Dusky Flycatcher,Empidonax oberholseri,4690,Cordilleran Flycatcher,Empidonax occidentalis,4640,1965,1965,44.351144,103.924171,,46404690
+22,36,107,Dusky Flycatcher,Empidonax oberholseri,4689,Cordilleran Flycatcher,Empidonax occidentalis,4640,1965,1965,44.351144,103.924171,duplicated because there are two AOU codes for sp. 1,46404689
+23,35,60,Dusky Flycatcher,Empidonax oberholseri,4690,Gray Flycatcher,Empidonax wrightii,4691,1960,1960,39.400696,120.154004,,46904691
+23,35,60,Dusky Flycatcher,Empidonax oberholseri,4689,Gray Flycatcher,Empidonax wrightii,4691,1960,1960,39.400696,120.154004,duplicated because there are two AOU codes for sp. 1,46894691
+23,35,62,Dusky Flycatcher,Empidonax oberholseri,4690,Gray Flycatcher,Empidonax wrightii,4691,1960,1960,39.564747,120.053458,,46904691
+23,35,62,Dusky Flycatcher,Empidonax oberholseri,4689,Gray Flycatcher,Empidonax wrightii,4691,1960,1960,39.564747,120.053458,duplicated because there are two AOU codes for sp. 1,46894691
+24,28,72,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,1966,1968,41.714689,73.222272,,46604661
+24,85,91,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,1985,1985,43.53333333,80.21666667,,46604661
+24,32,139,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,2004,2005,51.03333333,114.9,,46604661
+24,32,140,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,2004,2005,51.03333333,114.7833333,,46604661
+24,32,141,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,2004,2005,51.31666667,114.95,,46604661
+24,32,142,Willow Flycatcher,Empidonax traillii,4660,Alder Flycatcher,Empidonax alnorum,4661,2004,2005,51.46666667,114.85,,46604661
+25,70,82,Acadian Flycatcher,Empidonax virescens,4650,Eastern wood pewee,Contopus virens,4610,1955,1958,42.458087,84.011693,,46104650
+26,51,49,Kentucky warbler,Geothlypis formosa,6770,Hooded warbler,Setophaga citrina,6840,2000,2009,38.915,78.184,,67706840
+27,34,76,Wood Thrush,Hylocichla mustelina,7550,Veery,Catharus fuscescens,7560,1979,1982,42.24929722,87.93222222,,75507560
+27,65,101,Wood Thrush,Hylocichla mustelina,7550,Veery,Catharus fuscescens,7560,1965,1969,43.97619444,69.44166667,,75507560
+28,19,67,Bullocks Oriole,Icterus bullockii,5080,Baltimore Oriole,Icterus galbula,5070,1979,1981,40.84063611,102.8083806,,50705080
+29,38,133,Song Sparrow,Melospiza melodia,5810,White-throated Sparrow,Zonotrichia albicollis,5580,1945,1945,49.179864,88.79443,,55805810
+30,6,25,Brown-crested Flycatcher,Myiarchus tyrannulus,4530,Ash-throated Flycatcher,Myiarchus cinerascens,4540,1978,1980,34.298227,114.095225,,45304540
+31,49,27,Orange-crowned warbler,Oreothlypis celata,6460,Virginias warbler,Oreothlypis virginiae,6440,1986,1998,34.416667,111.166667,,64406460
+32,21,84,Indigo Bunting,Passerina cyanea,5980,Lazuli Bunting,Passerina amoena,5990,1969,1969,42.744396,103.002308,,59805990
+32,2,108,Indigo Bunting,Passerina cyanea,5980,Lazuli Bunting,Passerina amoena,5990,1990,1990,44.483188,103.86532,,59805990
+32,2,110,Indigo Bunting,Passerina cyanea,5980,Lazuli Bunting,Passerina amoena,5990,1989,1989,44.545324,104.090362,,59805990
+33,112,7,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.430442,94.681872,,59806010
+33,112,8,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.438347,94.930888,,59806010
+33,112,9,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.488415,94.562645,,59806010
+33,112,11,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.517098,94.762767,,59806010
+33,112,14,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.76001,94.805938,,59806010
+33,112,15,Indigo Bunting,Passerina cyanea,5980,Painted Bunting,Passerina ciris,6010,1985,1986,31.835679,94.612525,,59806010
+34,104,12,Cassins Sparrow,Peucaea cassinii,5780,Botteris Sparrow,Peucaea botterii,5760,1969,1969,31.735589,110.675869,,57605780
+35,40,129,Black-headed Grosbeak,Pheucticus melanocephalus,5960,Rose-breasted Grosbeak,Pheucticus ludovicianus,5950,1969,1971,48.093414,101.040756,,59505960
+36,100,24,Summer Tanager,Piranga rubra,6100,Scarlet Tanager,Piranga olivacea,6080,1978,1982,34.227746,87.353515,,60806100
+36,100,40,Summer Tanager,Piranga rubra,6100,Scarlet Tanager,Piranga olivacea,6080,1978,1982,37.533926,88.981867,,60806100
+36,100,46,Summer Tanager,Piranga rubra,6100,Scarlet Tanager,Piranga olivacea,6080,1978,1982,38.351273,87.823652,,60806100
+36,100,54,Summer Tanager,Piranga rubra,6100,Scarlet Tanager,Piranga olivacea,6080,1978,1982,39.123002,83.397729,,60806100
+36,100,61,Summer Tanager,Piranga rubra,6100,Scarlet Tanager,Piranga olivacea,6080,1978,1982,39.406559,84.089365,,60806100
+37,111,146,McKays Bunting,Plectrophenax hyperboreus,5350,Snow Bunting,Plectrophenax nivalis,5340,1982,1982,60.418577,172.76214,,53405350
+37,96,147,McKays Bunting,Plectrophenax hyperboreus,5350,Snow Bunting,Plectrophenax nivalis,5340,1966,1967,63.776835,171.688996,,53405350
+38,89,44,Carolina Chickadee,Poecile carolinensis,7360,Black-Capped Chickadee,Poecile atricapillus,7350,1975,1978,38.071136,94.038734,,73507360
+38,5,50,Carolina Chickadee,Poecile carolinensis,7360,Black-Capped Chickadee,Poecile atricapillus,7350,1958,1958,38.950636,89.092008,,73507360
+39,1,1,California Gnatcatcher,Polioptila californica,7530,Black-tailed Gnatcatcher,Polioptila melanura,7520,1982,1985,29.52,114.3402778,,75207530
+39,1,1,California Gnatcatcher,Polioptila californica,7530,Black-tailed Gnatcatcher,Polioptila melanura,7539,1982,1985,29.52,114.3402778,duplicated because there are two AOU codes for sp. 2,75307539
+40,31,16,Bushtit,Psaltriparus minimus,7430,Black-throated Gray Warbler,Setophaga nigrescens,6650,1984,1986,31.881122,109.231879,,66507430
+41,97,2,Boat-tailed Grackles,Quiscalus major,5130,Great-tailed Grackle,Quiscalus mexicanus,5120,1959,1959,29.72777778,93.87083333,,51205130
+41,97,4,Boat-tailed Grackles,Quiscalus major,5130,Great-tailed Grackle,Quiscalus mexicanus,5120,1960,1960,30.01027778,93.85805556,,51205130
+41,97,5,Boat-tailed Grackles,Quiscalus major,5130,Great-tailed Grackle,Quiscalus mexicanus,5120,1959,1959,30.10666667,93.77305556,,51205130
+41,97,6,Boat-tailed Grackles,Quiscalus major,5130,Great-tailed Grackle,Quiscalus mexicanus,5120,1959,1960,30.20972222,93.54583333,,51205130
+42,58,100,Northern Parula,Setophaga americana,6480,Golden-crowned Kinglet,Regulus satrapa,7480,1962,1966,43.96722,69.42611,,64807480
+43,59,100,Blackburnian warbler,Setophaga fusca,6620,Northern Parula,Setophaga americana,6480,1962,1966,43.96722,69.42611,,64806620
+44,64,100,Blackburnian warbler,Setophaga fusca,6620,Yellow-rumped (Myrtle) warbler,Setophaga coronata,6550,1962,1974,43.96722,69.42611,,65506620
+44,64,100,Blackburnian warbler,Setophaga fusca,6620,Yellow-rumped (Myrtle) warbler,Setophaga  coronata coronata,6556,1962,1974,43.96722,69.42611,duplicated because there are two AOU codes for sp. 2,65566620
+45,62,100,Blackburnian warbler,Setophaga fusca,6620,Black-throated green warbler,Setophaga virens,6670,1962,1974,43.96722,69.42611,,66206670
+46,63,100,Magnolia warbler,Setophaga magnolia,6570,Yellow-rumped (Myrtle) warbler,Setophaga coronata,6550,1962,1974,43.96722,69.42611,,65506570
+46,63,100,Magnolia warbler,Setophaga magnolia,6570,Yellow-rumped (Myrtle) warbler,Setophaga  coronata coronata,6556,1962,1974,43.96722,69.42611,duplicated because there are two AOU codes for sp. 2,65566570
+47,69,100,Magnolia warbler,Setophaga magnolia,6570,Blackburnian warbler,Setophaga fusca,6620,1962,1974,43.96722,69.42611,,65706620
+48,79,117,Hermit warbler,Setophaga occidentalis,6690,Townsends warbler,Setophaga townsendi,6680,1994,1998,46.5,121.75,,66806690
+49,37,32,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.078615,82.066085,,64206590
+49,37,33,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.152308,82.05569,,64206590
+49,37,34,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.268198,81.78505,,64206590
+49,37,35,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.32089,81.710751,,64206590
+49,37,36,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.331509,81.716816,,64206590
+49,37,37,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.343922,81.696389,,64206590
+49,23,81,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,1961,1966,42.455,76.438,,64206590
+49,37,148,Chestnut-sided warbler,Setophaga pensylvanica,6590,Golden-winged warbler,Vermivora chrysoptera,6420,2013,2015,36.410463,81.652184,,64206590
+50,57,102,Yellow warbler,Setophaga petechia,6520,Chestnut-sided warbler,Setophaga pensylvanica,6590,1963,1965,44.002,69.429,,65206590
+50,57,104,Yellow warbler,Setophaga petechia,6520,Chestnut-sided warbler,Setophaga pensylvanica,6590,1963,1965,44.032876,69.518888,,65206590
+50,57,112,Yellow warbler,Setophaga petechia,6520,Chestnut-sided warbler,Setophaga pensylvanica,6590,1963,1965,45.465039,68.2036,,65206590
+51,66,94,Yellow warbler,Setophaga petechia,6520,American redstart,Setophaga ruticilla,6870,1967,1970,43.888,69.439,,65206870
+51,66,95,Yellow warbler,Setophaga petechia,6520,American redstart,Setophaga ruticilla,6870,1967,1970,43.89175,69.373658,,65206870
+51,67,96,Yellow warbler,Setophaga petechia,6520,American redstart,Setophaga ruticilla,6870,1967,1970,43.91,69.4,,65206870
+52,10,111,Pine warbler,Setophaga pinus,6710,Yellow-rumped (Myrtle) warbler,Setophaga coronata,6550,2008,2009,44.55,76.316667,,65506710
+52,10,111,Pine warbler,Setophaga pinus,6710,Yellow-rumped (Myrtle) warbler,Setophaga  coronata coronata,6556,2008,2009,44.55,76.316667,duplicated because there are two AOU codes for sp. 2,65566710
+53,91,31,Pine warbler,Setophaga pinus,6710,Yellow-throated warbler,Setophaga dominica,6630,1993,1994,35.738,93.094,,66306710
+53,68,45,Pine warbler,Setophaga pinus,6710,Yellow-throated warbler,Setophaga dominica,6630,1967,1967,38.139,75.44,,66306710
+53,24,48,Pine warbler,Setophaga pinus,6710,Yellow-throated warbler,Setophaga dominica,6630,1963,1966,38.6078,76.805153,,66306710
+54,99,99,American redstart,Setophaga ruticilla,6870,Least flycatcher,Empidonax minimus,4670,1981,1987,43.943821,71.707022,,46706870
+54,50,109,American redstart,Setophaga ruticilla,6870,Least flycatcher,Empidonax minimus,4670,1994,1994,44.538422,76.366884,,46706870
+54,25,113,American redstart,Setophaga ruticilla,6870,Least flycatcher,Empidonax minimus,4670,2003,2003,45.922443,111.526216,,46706870
+55,60,100,Black-throated green warbler,Setophaga virens,6670,Northern Parula,Setophaga americana,6480,1962,1969,43.96722,69.42611,,64806670
+56,61,100,Black-throated green warbler,Setophaga virens,6670,Yellow-rumped (Myrtle) warbler,Setophaga coronata,6550,1962,1974,43.96722,69.42611,,65506670
+56,61,100,Black-throated green warbler,Setophaga virens,6670,Yellow-rumped (Myrtle) warbler,Setophaga  coronata coronata,6556,1962,1974,43.96722,69.42611,duplicated because there are two AOU codes for sp. 2,65566670
+56,94,103,Black-throated green warbler,Setophaga virens,6670,Yellow-rumped (Myrtle) warbler,Setophaga coronata,6550,1977,1977,44.016667,71.833333,,65506670
+56,94,103,Black-throated green warbler,Setophaga virens,6670,Yellow-rumped (Myrtle) warbler,Setophaga  coronata coronata,6556,1977,1977,44.016667,71.833333,duplicated because there are two AOU codes for sp. 2,65566670
+57,62,100,Black-throated green warbler,Setophaga virens,6670,Magnolia warbler,Setophaga magnolia,6570,1962,1974,43.96722,69.42611,,65706670
+57,94,103,Black-throated green warbler,Setophaga virens,6670,Magnolia warbler,Setophaga magnolia,6570,1977,1977,44.016667,71.833333,,65706670
+58,103,144,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6680,2007,2010,55.609831,122.354066,,66706680
+58,103,144,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6685,2007,2010,55.609831,122.354066,duplicated because there are three AOU codes for sp. 2,66706685
+58,103,144,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6686,2007,2010,55.609831,122.354066,duplicated because there are three AOU codes for sp. 2,66706686
+58,39,145,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6680,2012,2012,55.668775,121.73358,,66706680
+58,39,145,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6685,2012,2012,55.668775,121.73358,duplicated because there are three AOU codes for sp. 2,66706685
+58,39,145,Black-throated green warbler,Setophaga virens,6670,Townsends warbler,Setophaga townsendi,6686,2012,2012,55.668775,121.73358,duplicated because there are three AOU codes for sp. 2,66706686
+59,83,47,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,1968,1978,38.53065278,105.5005556,,76707680
+59,33,114,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,1976,1978,45.95614167,120.2797222,,76707680
+59,16,115,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2002,2005,46.23953611,114.1730556,,76707680
+59,16,118,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2001,2005,46.81504722,114.1875,,76707680
+59,17,119,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2001,2005,46.85343611,113.9294444,,76707680
+59,16,121,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2002,2003,47.30236389,115.0991667,,76707680
+59,16,122,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2003,2005,47.36192778,114.5877778,,76707680
+59,16,125,Mountain Bluebird,Sialia currucoides,7680,Western Bluebird,Sialia mexicana,7670,2001,2005,47.45691389,114.2883333,,76707680
+60,83,92,Mountain Bluebird,Sialia currucoides,7680,Eastern Bluebird,Sialia sialis,7660,1968,1978,43.67892778,103.4547222,,76607680
+60,52,134,Mountain Bluebird,Sialia currucoides,7680,Eastern Bluebird,Sialia sialis,7660,1963,1968,49.91819722,99.53222222,,76607680
+61,83,19,Eastern bluebird,Sialia sialis,7660,Western Bluebird,Sialia mexicana,7670,1968,1978,32.040775,111.6683333,,76607670
+62,13,26,Lawrences Goldfinch,Spinus lawrencei,5310,Lesser Goldfinch,Spinus psaltria,5300,1964,1965,34.36666667,118.45,,53005310
+62,46,38,Lawrences Goldfinch,Spinus lawrencei,5310,Lesser Goldfinch,Spinus psaltria,5300,1938,1955,36.38,121.57,,53005310
+63,80,131,Brewers sparrow,Spizella breweri,5620,Clay-colored Sparrow,Spizella pallida,5610,1989,1991,49.016667,110.066667,,56105620
+64,92,43,Eastern Meadowlark,Sturnella magna,5010,Western Meadowlark,Sturnella neglecta,5011,1970,1970,37.925043,99.377074,,50105011
+64,20,75,Eastern Meadowlark,Sturnella magna,5010,Western Meadowlark,Sturnella neglecta,5011,2007,2009,42.204897,90.33333333,,50105011
+64,41,85,Eastern Meadowlark,Sturnella magna,5010,Western Meadowlark,Sturnella neglecta,5011,1955,1966,42.969282,89.379869,,50105011
+64,42,86,Eastern Meadowlark,Sturnella magna,5010,Western Meadowlark,Sturnella neglecta,5011,1951,1955,43.002307,89.424175,,50105011
+65,29,130,Bewicks Wren,Thryomanes bewickii,7190,Song Sparrow,Melospiza melodia,5810,1974,1974,48.44055556,122.4291667,,58107190
+66,22,126,Bewicks Wren,Thryomanes bewickii,7190,Pacific Wren,Troglodytes pacificus,7221,1998,2010,47.52583333,122.1061111,,71907221
+66,22,126,Bewicks Wren,Thryomanes bewickii,7190,Pacific Wren,Troglodytes pacificus,7220,1998,2010,47.52583333,122.1061111,duplicated because there are two AOU codes for sp. 2,71907220
+67,56,21,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1971,1975,34.093134,118.61427,,71907210
+67,56,23,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1971,1975,34.21752,118.720373,,71907210
+67,93,39,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1962,1963,36.3875,121.5494444,,71907210
+67,93,41,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1962,1963,37.81694444,122.0494444,,71907210
+67,101,65,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1914,1920,40.20555556,80.55666667,,71907210
+67,72,70,House Wren,Troglodytes aedon,7210,Bewicks Wren,Thryomanes bewickii,7190,1957,1957,41.48027778,81.45805556,,71907210
+68,106,80,American Robin,Turdus migratorius,7610,Wood Thrush,Hylocichla mustelina,7550,1937,1938,42.44310278,76.48666667,,75507610
+69,102,69,Eastern kingbird,Tyrannus tyrannus,4440,Western kingbird,Tyrannus verticalis,4470,1985,1992,41.210321,101.660681,,44404470
+70,74,3,Western kingbird_,Tyrannus verticalis,4470,Scissor-tailed flycatcher,Tyrannus forficatus,4430,1969,1971,29.874662,103.987788,,44304470
+70,86,29,Western kingbird_,Tyrannus verticalis,4470,Scissor-tailed flycatcher,Tyrannus forficatus,4430,1991,1992,34.662426,98.383865,,44304470
+71,74,3,Cassins kingbird,Tyrannus vociferans,4480,Western kingbird,Tyrannus verticalis,4470,1969,1971,29.874662,103.987788,,44704480
+71,4,17,Cassins kingbird,Tyrannus vociferans,4480,Western kingbird,Tyrannus verticalis,4470,1978,1980,31.917345,109.133929,,44704480
+71,4,18,Cassins kingbird,Tyrannus vociferans,4480,Western kingbird,Tyrannus verticalis,4470,1978,1980,31.944068,109.213374,,44704480
+71,26,28,Cassins kingbird,Tyrannus vociferans,4480,Western kingbird,Tyrannus verticalis,4470,1976,1977,34.518761,111.741461,,44704480
+72,73,56,Blue-winged warbler,Vermivora cyanoptera,6410,Prairie warbler,Setophaga discolor,6730,1952,1965,39.178014,86.494391,,64106730
+72,73,57,Blue-winged warbler,Vermivora cyanoptera,6410,Prairie warbler,Setophaga discolor,6730,1952,1965,39.194247,86.525359,,64106730
+73,23,63,Blue-winged warbler,Vermivora cyanoptera,6410,Golden-winged warbler,Vermivora chrysoptera,6420,1964,1964,39.622,77.405,,64106420
+73,11,79,Blue-winged warbler,Vermivora cyanoptera,6410,Golden-winged warbler,Vermivora chrysoptera,6420,1977,1977,42.413721,76.493061,,64106420
+73,23,81,Blue-winged warbler,Vermivora cyanoptera,6410,Golden-winged warbler,Vermivora chrysoptera,6420,1961,1966,42.455,76.438,,64106420
+73,12,90,Blue-winged warbler,Vermivora cyanoptera,6410,Golden-winged warbler,Vermivora chrysoptera,6420,1988,1994,43.43658,76.140051,,64106420
+73,109,93,Blue-winged warbler,Vermivora cyanoptera,6410,Golden-winged warbler,Vermivora chrysoptera,6420,1981,1984,43.76666667,84.31666667,,64106420
+74,90,97,Philadelphia Vireo,Vireo philadelphicus,6260,Red-eyed Vireo,Vireo olivaceus,6240,1975,1978,43.940754,71.709531,,62406260
+74,87,116,Philadelphia Vireo,Vireo philadelphicus,6260,Red-eyed Vireo,Vireo olivaceus,6240,1972,1973,46.41666667,79.75,,62406260
+74,87,128,Philadelphia Vireo,Vireo philadelphicus,6260,Red-eyed Vireo,Vireo olivaceus,6240,1971,1973,47.822593,79.910424,,62406260
+75,7,71,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1981,1981,41.5667,111.9667,,49707250
+75,7,74,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1981,1982,41.8,111.9333,,49707250
+75,8,89,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1967,1968,43.413701,93.418053,,49707250
+75,75,123,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1961,1962,47.417494,117.573895,,49707250
+75,105,124,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1969,1969,47.417798,117.569262,,49707250
+75,44,135,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1983,1984,50.17416667,98.32444444,,49707250
+75,71,137,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1992,1992,50.206122,98.215435,,49707250
+75,81,137,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Marsh wren,Cistothorus palustris,7250,1983,1987,50.206122,98.215435,,49707250
+76,54,105,Yellow-headed Blackbird,Xanthocephalus xanthocephalus,4970,Common Grackle,Quiscalus quiscula,5110,1980,1980,44.083236,87.968288,,49705110
+77,114,149,McCown's Longspur,Rhynchophanes mccownii,5390,Horned Lark,Eremophila alpestris,4740,1990,1991,40.810271,104.74845,,47405390
+78,114,149,McCown's Longspur,Rhynchophanes mccownii,5390,Lark Bunting,Calamospiza melanocorys,6050,1990,1991,40.810271,104.74845,,53906050
+79,115,150,Chestnut-collared Longspur,Calcarius ornatus,5380,Horned Lark,Eremophila alpestris,4740,1993,1995,50.791,110.296,,47405380
+80,115,150,Chestnut-collared Longspur,Calcarius ornatus,5380,McCown's Longspur,Rhynchophanes mccownii,5390,1993,1995,50.791,110.296,,53805390
+81,115,150,Chestnut-collared Longspur,Calcarius ornatus,5380,Baird's Sparrow,Ammodramus bairdi,5450,1993,1995,50.791,110.296,,53805450
+82,116,151,Hooded Oriole,Icterus cucullatus,5050,Bullock's Oriole,Icterus bullockii,5080,1970,1970,34.073276,119.015546,,50505080
+83,117,152,Rusty blackbird,Euphagus carolinus,5090,Red-winged Blackbird,Agelaius phoeniceus,4980,1990,1990,44.680286,71.707657,,49805090
