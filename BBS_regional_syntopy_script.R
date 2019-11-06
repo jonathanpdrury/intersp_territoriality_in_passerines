@@ -530,8 +530,8 @@ data$IT.loc.spsp<-as.character(paste(data$sp.pair,data$loc.spsp,sep="."))
 
 #add unique species pair column to species pairs list
 for(i in 1:length(pairs[,1])){
-if(pairs$aou.1[i]<pairs$aou.2[i]) {pairs$spsp[i]<-as.character(paste(pairs$aou.1[i],pairs$aou.2[i],sep=""))}
-else {pairs$spsp[i]<-as.character(paste(pairs$aou.2[i],pairs$aou.1[i],sep=""))}
+if(pairs$AOU.1[i]<pairs$AOU.2[i]) {pairs$spsp[i]<-as.character(paste(pairs$AOU.1[i],pairs$AOU.2[i],sep=""))}
+else {pairs$spsp[i]<-as.character(paste(pairs$AOU.2[i],pairs$AOU.1[i],sep=""))}
 }
 #subset data to species pairs on list
 data <- subset(data, data$spsp %in% pairs$spsp)

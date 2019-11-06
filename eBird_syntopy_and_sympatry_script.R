@@ -28,7 +28,7 @@ library(geosphere)
 library(tools)
 
 #open species pair list
-taxa <- read.csv("~/BBS/Species_pairs2", header=TRUE)
+taxa <- read.csv("~/BBS/Species_pairs", header=TRUE)
 
 #Create output variables if starting over with new species pair list
 if(length(taxa$ebird.min.syntopy)==0) {

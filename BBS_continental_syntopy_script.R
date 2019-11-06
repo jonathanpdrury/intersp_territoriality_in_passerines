@@ -14,7 +14,7 @@ for(i in 2:length(x)) {
 #Open the species pair list and create list of unique AOU numbers
     #absence of a species in the BBS list was assumed to mean that the species has not been recorded in BBS surveys; species pairs including those species are tagged with In.BBS = 0
 
-wc.pairs <- read.csv("~/BBS/Species_pairs2.csv", header=TRUE)
+wc.pairs <- read.csv("~/BBS/Species_pairs.csv", header=TRUE)
 wc.pairs <- subset(wc.pairs, wc.pairs$In.BBS==1)
 	#(removes species wc.pairs that are not in BBS Species.List (i.e., one or both species missing))
 species <- append(wc.pairs$AOU.1, wc.pairs$AOU.2)
