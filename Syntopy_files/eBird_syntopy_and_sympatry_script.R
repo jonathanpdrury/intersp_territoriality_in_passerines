@@ -37,7 +37,26 @@ if(length(taxa$ebird.min.syntopy)==0) {
 
 for(i in 1:length(taxa$pair.n)){
 
-    #Find eBird files	
+    #Find eBird files: Here we split up datasets into smaller files by subsetting eBird into US & Canada observations and Mexico observations
+    #Then building files for each species in unix, e.g.:
+    
+    #grep 'Camptostoma[^=]*imberbe' mex_ebird.txt > Camptostoma_imberbe_Mex.txt
+	#cut -f 5,8,9,10,12,23,24,25,33,41,42  Camptostoma_imberbe_Mex.txt > hold.txt
+	#mv  hold.txt  /Mexico/Camptostoma_imberbe_Mex.txt
+	
+	#Preserving the following columns from original eBird dataset
+	#(1) SCIENTIFIC NAME
+	#(2) OBSERVATION COUNT
+	#(3) BREEDING BIRD ATLAS CODE
+	#(4) AGE/SEX
+	#(5) COUNTRY CODE
+	#(6) LATITUDE
+	#(7) LONGITUDE
+	#(8) OBSERVATION DATE
+	#(9) PROTOCOL TYPE
+	#(10) APPROVED
+	#(11) REVIEWED
+    	
     ebirdpath1U<-list.files(path="US_Canada", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
     ebirdpath2U<-list.files(path="US_Canada", pattern=as.character(taxa$sp.2.sci[i]), full.names='TRUE')
     ebirdpath1M<-list.files(path="Mexico", pattern=as.character(taxa$sp.1.sci[i]), full.names='TRUE')
@@ -57,7 +76,7 @@ for(i in 1:length(taxa$pair.n)){
     try(ebird2M <- read.delim(ebirdpath2M, header=FALSE, sep="\t"),silent=TRUE)
 
 	#Remove uneeded columns
-	ebird1U<-subset(ebird1U, select = c(V1,V5:V8))
+	ebird1U<-subset(ebird1U, select = c(V1,V5:V8)) #see above for column annotation
 	ebird2U<-subset(ebird2U, select = c(V1,V5:V8))
 	ebird1M<-subset(ebird1M, select = c(V1,V5:V8))
 	ebird2M<-subset(ebird2M, select = c(V1,V5:V8))
@@ -77,8 +96,6 @@ for(i in 1:length(taxa$pair.n)){
       #The eBird was subsetted using a pattern search, so the single species files can contain rows for other species if the focal species was mentioned in notes
       #This also removes unidentified species names like "Baeolophus bicolor/atricristatus" but retains hybrids iff the focal species' name comes before " x", as in "Baeolophus bicolor x atricristatus”
       #Currently, in the subsequent code, all "Baeolophus bicolor x“ are grouped with "Baeolophus bicolor” and, likewise, any "Baeolophus atricristatus x” are grouped with "Baeolophus atricristatus”.  
-      #A potential problem is that if one person recorded an individual hybrid as "Baeolophus bicolor x atricristatus” and another person recorded it as "Baeolophus atricristatus x bicolor” in the same year,
-      #this would be counted as an instance of the two species being found in syntopy (assuming the locations are <402 m apart).
     
     ebird1$sp <- as.character(ebird1$V1)
     ebird1<-subset(ebird1,sp==taxa$sp.1.sci_spc[i] | sp %in% grep(paste(taxa$sp.1.sci_spc[i],"x",sep=" "), ebird1$sp, value=TRUE))
