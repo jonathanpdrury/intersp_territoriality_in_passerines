@@ -10,9 +10,9 @@ it_dataset$hybrid.cavity<-apply(cbind(it_dataset$hybrid.ok,it_dataset$both.hole.
 #define the prior (a generic, non-informative prior):
 prior<-list(G=list(G1=list(V=1,nu=0.002),G2=list(V=1,nu=0.002),G3=list(V=1,nu=0.002)),R=list(V=1,nu=0.02))
 
-### INTRAFAMILY SONG ANALYSES
+### INTRAFAMILY PLUMAGE ANALYSES
 
-## Analyses in Extended Data Table 5:
+## Analyses in Table S9:
 
 #first, a model with main effects and no interactions for all intrafamily IT species pairs
 m.p_chain1<-MCMCglmm(scale(plumage.diff.sq) ~ factor(hybrid.ok) + factor(IT.classif)  + scale(logBBSe.syntopyOu)+ scale(proportion.shared.axes) + scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==1 & logBBSe.syntopyOu!="NA"), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
@@ -55,7 +55,7 @@ quantile(lambda_m.p.x,c(0.025,0.975)) #lambda 95% credibility interval
 mean(c(m.p.x_chain1$DIC,m.p.x_chain2$DIC,m.p.x_chain3$DIC,m.p.x_chain4$DIC)) #mean DIC value
 
 
-## Analyses in Extended Data Table 6:
+## Analyses in Table S10:
 
 #A model with main effects and no interactions, just non-hybridizing, non-cavity nesting intrafamily IT species pairs
 m.p.a_chain1<-MCMCglmm(scale(plumage.diff.sq) ~  scale(patristic.distance)+scale(logBBSe.syntopyOu)+factor(IT.classif)+ scale(proportion.shared.axes) + scale(mass.diff.sqrt), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==1 & logBBSe.syntopyOu!="NA" & hybrid.cavity==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
@@ -102,14 +102,14 @@ mean(c(m.p.a.x_chain1$DIC,m.p.a.x_chain2$DIC,m.p.a.x_chain3$DIC,m.p.a.x_chain4$D
 
 ### INTERFAMILY SONG ANALYSES
 
-## Analyses in Extended Data Table 7:
+## Analyses in Table S11:
 
 ##Fit a model with main effects and no interactions for all interfamily IT species pairs:
 
-m.s_chain1<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s_chain2<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes) + factor(IT.classif)+ scale(logBBSe.syntopyOu) + scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s_chain3<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s_chain4<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s_chain1<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s_chain2<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes) + factor(IT.classif)+ scale(logBBSe.syntopyOu) + scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s_chain3<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s_chain4<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes) + factor(IT.classif) + scale(logBBSe.syntopyOu)+ scale(mass.diff.sqrt)+ factor(both.hole.nester)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
 
 m.s_combined<-mcmc.list(m.s_chain1$Sol,m.s_chain2$Sol,m.s_chain3$Sol,m.s_chain4$Sol)
 gelman.diag(m.s_combined) #assess chain convergence
@@ -126,10 +126,10 @@ quantile(lambda_m.s,c(0.025,0.975)) #lambda 95% credibility interval
 mean(c(m.s_chain1$DIC,m.s_chain2$DIC,m.s_chain3$DIC,m.s_chain4$DIC)) #mean DIC value
 
 
-m.s.x_chain1<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s.x_chain2<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s.x_chain3<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
-m.s.x_chain4<-MCMCglmm(scale(song.pcdists) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s.x_chain1<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s.x_chain2<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s.x_chain3<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
+m.s.x_chain4<-MCMCglmm(scale(song.pcdists.std) ~  scale(proportion.shared.axes)*factor(IT.classif)+ scale(logBBSe.syntopyOu)*factor(IT.classif) + scale(mass.diff.sqrt)*factor(IT.classif)+ factor(both.hole.nester)*factor(IT.classif)+ scale(patristic.distance), random = ~animal + species1 + species2, data=subset(it_dataset,same.family==0), family = "gaussian", ginverse = list(animal = INphylo$Ainv),prior=prior,nitt=2000000,burnin=20000,thin=1000,verbose=TRUE)
 
 m.s.x_combined<-mcmc.list(m.s.x_chain1$Sol,m.s.x_chain2$Sol,m.s.x_chain3$Sol,m.s.x_chain4$Sol)
 gelman.diag(m.s.x_combined) #assess chain convergence
